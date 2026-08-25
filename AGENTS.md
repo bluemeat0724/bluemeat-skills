@@ -1,7 +1,7 @@
 # Skill 开发
 
-- `skills-manual-only/`：需用户手动触发的 skill，可直接安装到设备的 `~/.agents/skills/`。
-- `skills-project-level/`：项目级 skill，可单独安装到项目的 `.agents/skills/`。
+- `skills/`：需用户手动触发的 skill，也是 `npx skills add` 默认发现并全局安装的目录。
+- `skills-project-level/`：项目级 skill，需在项目根目录通过包含 skill name 的仓库子路径单独安装。
 - `working/`：尚未完成、暂不可用的 skill。
 
 - 维护 `readme.md` 中的 skill 目录，及时更新；小改动无需同步修改。
