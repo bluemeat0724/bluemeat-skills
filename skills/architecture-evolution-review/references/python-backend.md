@@ -1,26 +1,12 @@
 # Python Backend Architecture Lens
 
-Apply this lens when the inventory finds a first-party Python backend. It is optimized for FastAPI, Pydantic v2, pydantic-settings, and SQLAlchemy 2.x, but judge a sound existing stack on its own merits. These preferences shape the target architecture; they become findings only when code evidence shows change friction, unsafe coupling, or contract risk.
+Apply this lens when the inventory finds a first-party Python backend. It is optimized for FastAPI, Pydantic v2, pydantic-settings, and SQLAlchemy 2.x, but judge a sound existing stack on its own merits. These guidelines become findings only when code evidence shows change friction, unsafe coupling, or contract risk.
 
-## Preferred Shape
+## Architecture-Neutral Evaluation
 
-Organize first by business capability, then by responsibility inside each capability:
+Do not require a particular directory tree, layering scheme, or capability decomposition. Reconstruct the architecture the repository actually uses, identify responsibility and ownership boundaries, and judge whether common changes remain local and dependencies remain understandable. Recommend a different shape only when repository evidence shows the current one causes material friction or risk.
 
-```text
-app/
-├── main.py                 # composition root and lifespan
-├── settings.py             # the single Settings root
-├── shared/                 # small, stable, jointly owned concepts only
-└── <capability>/
-    ├── api/                # FastAPI routes and HTTP/SSE mapping
-    ├── application/        # use cases, transactions, ports
-    ├── domain/             # rules, invariants, state transitions
-    └── infrastructure/     # SQLAlchemy and external adapters
-```
-
-Names may differ. Responsibilities and dependency direction matter more than matching this tree.
-
-Allowed source dependencies:
+When the repository already separates equivalent `domain`, `application`, `api`, and `infrastructure` responsibilities, use this table as a reference rather than a required architecture:
 
 | Source | May depend on |
 |---|---|
