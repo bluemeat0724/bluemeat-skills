@@ -65,3 +65,8 @@ npx skills add bluemeat0724/bluemeat-skills/skills-project-level/langchain-dev-g
 
 `taste-skill` 来自 https://github.com/Leonxlnx/taste-skill/blob/main/skills/taste-skill/SKILL.md
 
+`pony` skill 与 `agents_md/AGENTS.md` Pony 人设受以下项目启发：
+
+- [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) — `ponytail:` 注释约定的原型
+- [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) — 四大原则（Think Before Coding / Simplicity First / Surgical Changes / Goal-Driven Execution）的 LLM 行为基线；原作者 [Andrej Karpathy](https://github.com/karpathy)
+
