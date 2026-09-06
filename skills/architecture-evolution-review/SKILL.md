@@ -13,7 +13,7 @@ This skill reports only—it may create the requested report, but changes no app
 ## Defaults
 
 - Scope: the whole repository, excluding dependencies, generated output, caches, binaries, and vendored code unless they define an architectural constraint.
-- Output: `architecture-optimization-<project>-<YYYY-MM-DD-HHmm>.md` in the project root, written in the user's language. Use stdout or another path when requested.
+- Output: `.architecture/architecture-optimization-<project>-<YYYY-MM-DD-HHmm>.md`, written in the user's language. Use stdout or another path when requested.
 - Review log: `.architecture/optimization-log.md`. The first verified run creates it; later runs validate and reuse it to avoid rereading unchanged code.
 - Evidence: repository contents first; Git history and runnable project checks when available. Do not install tools or dependencies just for the review.
 - Internal compatibility: existing modules, internal APIs, abstractions, file layout, and implementation-shaped tests impose no constraint. Prefer the clean target over adapters that preserve old code.
